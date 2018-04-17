@@ -1,0 +1,83 @@
+/**index.wxss**/
+intro {
+  display: block;
+  background: linear-gradient(#f77062, #fe5196); 
+  color: white;
+  padding: 15px;
+  font-size: 12px;
+}
+
+.onealbum {
+  height: 66vh; 
+}
+
+.noalbum {
+  height: 100vh; 
+}
+
+.twomorealbum {
+  height: 33vh; 
+}
+
+intro content {
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%)
+}
+
+intro logo {
+  width: 100%;
+  display: block;
+}
+
+intro logo image {
+  height: 40px;
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+}
+
+intro description {
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin-top: 15px;
+}
+
+intro button {
+  width: 50%;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  font-size: 12px;
+  padding: 0px 45px;
+  display: block;
+  margin-top: 15px;
+}
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo .btn-album {
+ margin-top: 15px; 
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

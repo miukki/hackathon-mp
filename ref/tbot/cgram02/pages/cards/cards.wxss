@@ -1,0 +1,101 @@
+@import "../common/weui.wxss";
+
+.swiper-box {
+  width: 100%;
+  /*border:1px solid #f00;*/
+  display: block;
+  /*min-height: 600px;*/
+  /*height: 100%;*/
+}
+
+.swiper {
+  display: block;
+  width: 100%;
+  /*height: 100%;  doesnt work */
+  min-height: 600px;
+  /*border:1px solid #444;*/
+  /*min-height: 600px;*/
+  /*padding: 5%;*/
+}
+
+.swiper-item {
+  display: block;
+  /*height: 100%;*/
+  /*border: 1px solid black;*/
+  background: #ccc;
+  padding: 20px;
+  min-height: 600px;
+  /*width: 90%;*/
+  /*margin: 5px;*/
+  /*border-radius: 10px;*/
+  background: #ffc;
+}
+
+.card-heading {
+  font-size: 48px;
+}
+
+.t-right {
+  text-left: middle;
+  padding-left: 30;
+}
+
+.page-section-title{
+  margin-top: 60rpx;
+  position: relative;
+}
+
+.info{
+  position: absolute;
+  right: 0;
+  color: #353535;
+  font-size: 30rpx;
+}
+
+.page-foot{
+  margin-top: 50rpx;
+}
+
+.gram-infobar {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  height: 20px;
+  background-color: #444;
+  color: white;
+  font-size: 0.5rem;
+  z-index: 100;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ex-block {
+  position: absolute;
+  bottom: 120px;
+  background: rgb(208, 251, 255);
+  border-radius: 5px;
+  width: 80%;
+  padding: 10px;
+}
+
+.click-me {
+  position: absolute;
+  top: 30%;
+  left: 0px;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+.see-more {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  z-index: 200;
+}

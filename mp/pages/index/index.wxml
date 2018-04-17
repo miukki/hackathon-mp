@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<albums>
+  <intro class="{{introLayout}}">
+    <content>
+      <logo>
+        <image src="/assets/images/logo.png"></image>
+      </logo>
+      <description>Create and Share Videos and Photos</description>
+      <button bindtap="createAlbum">Create</button>
+      <button bindtap="listAlbums">List</button>
+      <button bindtap="demo">Demo</button>
+    </content>
+  </intro>
+  <album class="{{item.type}}" wx:for="{{items}}" wx:for-item="item">
+    <title> {{item.date}} - {{item.title}}</title>
+    <image 
+      bindtap="deleteAlbum(id)"
+      class="delete-button" 
+      src="/assets/images/delete.png">
+    </image>
+    <image 
+      mode="aspectFill"
+      bindtap="goToAlbum"       
+      src="{{item.poster}}">
+    </image>
+  </album>
+</albums>

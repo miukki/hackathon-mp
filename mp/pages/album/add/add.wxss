@@ -1,0 +1,4 @@
+/* pages/album/add.wxss */
+.button-sp-area-layout {
+  margin: 15px;
+}

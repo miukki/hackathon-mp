@@ -1,0 +1,18 @@
+<swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+
+  <block wx:for="{{grams}}" wx:key="*this">
+    <view class="swiper-item">
+      swiper item
+    </view>
+  </block>
+</swiper>
+
+
+/*
+      {
+        "pagePath": "pages/daily/daily",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "Daily"
+      }*/

@@ -1,0 +1,27 @@
+{
+  "name": "mp-hack",
+  "version": "1.0.0",
+  "description": "hackathon idea",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dcsan/mp-hack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcsan/mp-hack/issues"
+  },
+  "homepage": "https://github.com/dcsan/mp-hack#readme",
+  "devDependencies": {
+    "eslint": "^4.7.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

@@ -1,0 +1,89 @@
+<!--list.wxml-->
+
+<import src="../common/foot.wxml" />
+
+<view class="container">
+
+  <view class="gram-list">
+
+    <view class="gram-item">
+
+      <view class="gram-title" data-item="{{item}}" >
+        <view class="gram-title-en fs-3" data-item="{{item}}" >
+          {{item.title.en}}
+        </view>
+        <view class="gram-title-zh fs-5" data-item="{{item}}" >
+          {{item.title.zh}}
+        </view>
+        <view class="gram-title-pin fs-3" data-item="{{item}}" >
+          {{item.title.pin}}
+        </view>
+      </view>
+
+    </view>
+
+    <!-- key example -->
+    <view bindtap="setExample"
+          catchtap="setExample"
+          data-item="{{keyex}}"
+          class="gram-item gram-item-ex">
+
+      <span class="gram-slug">example</span>
+
+      <view class="ex-en">
+        {{keyex.en}}
+      </view>
+      <view class="ex-zh">
+        {{keyex.zh}}
+      </view>
+      <view class="ex-pin">
+        {{keyex.pin}}
+      </view>
+
+    </view>
+
+    <view class="gram-item">
+      <view class="gram-slug">meaning</view>
+      <view class="gram-brief">
+        {{item.brief}}
+      </view>
+    </view>
+
+    <view class="gram-item">
+      <view class="gram-slug">explanation</view>
+      <view class="gram-explanation">
+        {{item.explanation}}
+      </view>
+    </view>
+
+    <!-- related -->
+    <view class="gram-item">
+      <view class="gram-slug">related</view>
+      <view wx:for="{{item.relatedArray}}" wx:key="item" class="gram-related" bindtap="relItemTap" data-item="{{item}}">
+        {{item}}
+      </view>
+    </view>
+
+    <view wx:for="{{examples}}" wx:key="{{item._id}}"
+          bindtap="exTap" data-item="{{item}}"
+          class="gram-item gram-item-ex">
+
+      <view class="ex-en">
+        {{item.en}}
+      </view>
+      <view class="ex-zh">
+        {{item.zh}}
+      </view>
+      <view class="ex-pin">
+        {{item.pin}}
+      </view>
+
+    </view>
+
+    <view class='bottom-padding'>
+    </view>
+
+    <template is="foot" />
+  </view>
+
+</view>

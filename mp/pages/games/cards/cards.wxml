@@ -1,0 +1,20 @@
+<!--pages/games/cards/cards.wxml-->
+<view class="page">
+  <text class='page-title'>Card Test</text>
+  <view wx:for="{{items}}" wx:key="{{item.cname}}"
+        bindtap="checkItem"
+        data-item="{{item}}"
+        class="gram-item" >
+
+  <view class="bottom-button">
+    <navigator open-type="switchTab" hover-class="navigator-hover" class='nav-button'>
+    <text class="user-motto">{{item.title}}</text>
+    </navigator>
+  </view>
+
+    <div class='block'>
+      {{item.text}}
+    </div>
+
+  </view>
+</view>

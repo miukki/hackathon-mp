@@ -1,0 +1,32 @@
+<!--list.wxml-->
+
+<import src="../common/foot.wxml" />
+
+<view class="container">
+
+    <view class="gram-list">
+
+      <view wx:for="{{items}}" wx:key="{{item.cname}}"
+            bindtap="gramItemTap" catchtap="gramItemTap"
+            data-item="{{item}}"
+            class="gram-item" >
+
+        <view class="gram-title" data-item="{{item}}" >
+
+          <view class="gram-title-en" data-item="{{item}}" >
+            {{item.title.en}}
+          </view>
+          <view class="gram-title-zh" data-item="{{item}}" >
+            {{item.title.zh}}
+          </view>
+          <view class="gram-title-pin" data-item="{{item}}" >
+            {{item.title.pin}}
+          </view>
+
+        </view>
+
+      </view>
+
+  </view>
+
+</view>

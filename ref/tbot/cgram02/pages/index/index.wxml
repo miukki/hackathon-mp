@@ -1,0 +1,83 @@
+<view class="container index-container splash-screen">
+
+  <navigator url="/pages/list/list" open-type="switchTab" hover-class="navigator-hover" class='splash-green'>
+
+    <image
+        class='qrcode'
+        src="app-qrcode.png"
+        mode="aspectFit" >
+    </image>
+
+    <view class="splash-logo">
+      GramaDay
+    </view>
+    <div class='stacked'>
+      <div>
+        Chinese English
+      </div>
+      <div>
+         Grammar Database
+       </div>
+    </div>
+  </navigator>
+
+  <view class="splash-box" wx:if="{{!loaded}}">
+    <div class="loading-message">
+      <div>Loading!!!</div>
+      <image
+          class='loading-wheel'
+          src="../../image/wheel.gif"
+          mode="aspectFit" >
+      </image>
+    </div>
+  </view>
+
+  <view class="splash-box" wx:if="{{loaded}}">
+
+    <navigator url="/pages/list/list" open-type="switchTab" hover-class="navigator-hover" class='nav-button'>
+      Grammar List
+    </navigator>
+
+    <navigator url="/pages/daily/daily" open-type="switchTab" hover-class="navigator-hover" class='nav-button'>
+      Daily Grammar
+    </navigator>
+
+    <navigator url="/pages/lessons/lessons" open-type="switchTab" hover-class="navigator-hover" class='nav-button'>
+      Lessons
+    </navigator>
+
+  </view>
+
+  <view class="splash-stats">
+    <button type="default" size="mini" bindtap="reloadData" class="splash-button"> reload data </button>
+    <button type="default" size="mini" bindtap="clearData" class="splash-button"> clear data </button>
+    <br/>
+    <div>
+      loaded: {{loaded}}
+    </div>
+    <div>
+      grammar: {{gramsCount}}
+    </div>
+    <div>
+      examples: {{examplesCount}}
+    </div>
+  </view>
+
+  <div class='splash-stats'>
+    <div>
+      This is community created content and we'd appreciate your help to add more examples!
+    </div>
+    <div>
+      <a href='http://CGram.rikai-bots.com'>http://CGram.rikai-bots.com</a>
+    </div>
+  </div>
+
+  <div class='splash-stats'>
+    <div>
+      screenshot and share the QR-Code above
+      to let your friends use the app!
+    </div>
+
+  </div>
+
+</view>

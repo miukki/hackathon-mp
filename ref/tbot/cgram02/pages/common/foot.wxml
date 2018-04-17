@@ -1,0 +1,21 @@
+<template name="foot">
+
+    <navigator url="/pages/index/index" open-type="switchTab" hover-class="navigator-hover" class='nav-button'>
+      <view class="footer-nav-bar">
+        🏠 Home
+      </view>
+    </navigator>
+
+    <!-- <navigator url="../index/index" hover-class="navigator-hover" open-type="redirect">
+      <button type="default" size="mini" >🏠 home</button>
+    </navigator>
+
+    <navigator url="../list/list" hover-class="navigator-hover" open-type="redirect">
+      <button type="default" size="mini" >list</button>
+    </navigator>
+
+    <navigator url="../daily/daily" hover-class="navigator-hover" open-type="redirect">
+      <button type="default" size="mini" >daily</button>
+    </navigator>  -->
+
+</template>

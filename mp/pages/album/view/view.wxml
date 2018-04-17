@@ -1,0 +1,18 @@
+<!--pages/album/view.wxml-->
+<!-- <title>Miniapp Hackathon</title> -->
+<album>
+
+  <title-wrapper>
+    <title>{{album.title}}</title>
+    <date>{{album.createdAt}}</date>
+  </title-wrapper>
+
+  <item class="{{item.type}}" wx:for="{{album.pics}}" wx:for-item="item" wx:key="item">
+    <image
+      wx:if="{{!item.type || item.type === 'pic'}}"
+      mode="aspectFill"
+      src="{{item}}">
+    </image>
+
+  </item>
+</album>

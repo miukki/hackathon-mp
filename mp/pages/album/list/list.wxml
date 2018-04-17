@@ -1,0 +1,17 @@
+<!--pages/album/list.wxml-->
+
+<button bindtap='fetchAlbums'>Refresh</button>
+<albums>
+
+  <album class="album" 
+      wx:for="{{albums}}" wx:for-item="item" wx:key="item.key"
+      data-item="{{item}}"
+      bindtap="viewAlbum">
+    <title>{{item.title}}</title>
+    <image 
+      mode="aspectFill"
+      src="{{item.pics[0]}}">
+    </image>
+  </album>
+
+</albums>

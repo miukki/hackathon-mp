@@ -1,0 +1,6 @@
+/* pages/games/list/list.wxss */
+
+.link-btn {
+  background-color: #ccc;
+  cursor: pointer;
+}

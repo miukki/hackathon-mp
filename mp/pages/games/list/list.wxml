@@ -1,0 +1,18 @@
+<!--pages/games/list/list.wxml-->
+<view class="page">
+  <text class='page-title'>test list</text>
+  <view wx:for="{{items}}" wx:key="{{item.cname}}"
+        data-item="{{item}}"
+        class="gram-item" >
+
+  <navigator url="/pages/games/cards/cards?item={{item.title}}" 
+    open-type="redirect" hover-class="navigator-hover" class='nav-button'
+  >
+    <div class='block'>
+      {{item.title}}
+      <text class='link-btn'>inner</text>
+    </div>
+  </navigator>
+
+  </view>
+</view>

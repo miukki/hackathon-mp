@@ -1,0 +1,77 @@
+<!--list.wxml-->
+<import src="../common/foot.wxml" />
+
+<view class="container">
+
+    <view class="swiper-box" bindtap="toggleVis">
+
+      <div class="gram-infobar">
+        {{gram.cname}} |
+        LV: {{gram.level}} |
+        {{gram.lang}}
+        [ {{offset}} / {{grams.length}} ]
+      </div>
+
+      <swiper
+        class="swiper"
+        vertical="{{vertical}}"
+        indicator-dots="{{indicatorDots}}"
+        bindchange="swipeChange" >
+        <block wx:for="{{grams}}" wx:key="{{item.cname}}">
+          <swiper-item class="swiper-item">
+
+            <!-- title -->
+            <view class="gram-title-en card-heading" data-item="{{item}}" style="visibility: {{vis.en}}">
+              {{item.title.en}}
+            </view>
+
+            <!-- help msg -->
+            <view class="click-me" style="visibility: {{vis.msg}}">
+              click me 💁‍
+            </view>
+
+            <!-- chinese -->
+            <view>
+              <view class="gram-title-zh card-heading t-right" data-item="{{item}}" style="visibility: {{vis.cn}}">
+                {{item.title.zh}}
+              </view>
+              <view class="gram-title-pin card-heading t-right" data-item="{{item}}" style="visibility: {{vis.pn}}">
+                {{item.title.pin}}
+              </view>
+            </view>
+
+            <!-- meaning  -->
+            <view class="gram-meaning" style="visibility: {{vis.meaning}}">
+              <view class="gram-brief">
+                {{item.brief}}
+              </view>
+            </view>
+
+            <view class="ex-block" style="visibility: {{vis.ex}}">
+              <view wx:for="{{examples}}" class="examples-block" wx:key="{{this.id}}">
+                <view class="ex-en">
+                  {{item.en}}
+                </view>
+                <view class="ex-zh">
+                  {{item.zh}}
+                </view>
+                <view class="ex-pin">
+                  {{item.pin}}
+                </view>
+              </view>
+            </view>
+
+          </swiper-item>
+        </block>
+      </swiper>
+
+    </view>
+
+
+    <view class="see-more" bindtap="seeMore">
+      ℹ️ read more...
+    </view>
+
+    <template is="foot" />
+
+</view>

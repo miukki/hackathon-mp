@@ -1,0 +1,36 @@
+
+.gram-block {
+  border: 1px solid black;
+  background-color: #eee;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gram-brief {
+  font-size: 25px;
+  line-height: 32px;
+  padding: 5px;
+}
+
+.gram-explanation {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 5px;
+}
+
+.gram-related {
+  font-size: 20px;
+  line-height: 26px;
+  padding: 5px;
+  border: 1px outset #ccc;
+  background-color: #b0e9b0;
+  display: inline-block;
+  /*background-color: rgb(186, 216, 218);*/
+  border-radius: 5px;
+}
+
+.bottom-padding {
+  height: 80px;
+  display: block;
+}

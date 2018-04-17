@@ -1,0 +1,32 @@
+<!--pages/album/demo.wxml-->
+
+<album>
+  <item class="{{item.type}}" wx:for="{{items}}" wx:for-item="item">
+    <!-- {{item.src}} -->
+    <image 
+      wx:if="{{item.type === 'picture'}}"
+      mode="aspectFill"
+      src="{{item.src}}">
+    </image>
+    
+    <background-title wx:if="{{item.src === items[0].src}}"></background-title>
+    <title-wrapper wx:if="{{item.src === items[0].src}}">
+      <title>{{title}}</title>
+      <date>{{date}}</date>
+    </title-wrapper>
+
+    <video 
+      wx:if="{{item.type === 'video'}}"
+      src="{{item.src}}" 
+      autoplay="true" 
+      controls="false"
+      objectFit="fill"
+      muted="true"
+      loop="true">
+    </video>
+     <buttons
+      wx:if="{{admin}}">
+    </buttons>
+  </item>
+
+</album>
